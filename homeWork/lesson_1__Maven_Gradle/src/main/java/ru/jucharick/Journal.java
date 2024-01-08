@@ -28,7 +28,6 @@ public class Journal {
             if (fileName.endsWith(".json")) {
                 try(FileWriter writer = new FileWriter(new File(fileName),true)) {
                     writer.write(gson.toJson(persons));
-                    writer.flush();
                 }
             } else if (fileName.endsWith(".bin")) {
                 try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {

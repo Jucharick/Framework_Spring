@@ -21,13 +21,16 @@ public class Program {
         File f = new File(FILE_JSON);
         if (f.exists() && !f.isDirectory())
             persons = loadJournalFromFile(FILE_JSON);
-        else
+        else {
             persons = preparePersons();
-        Journal.saveJournalToFile(FILE_JSON, persons);
-        Journal.saveJournalToFile(FILE_BIN, persons);
-        Journal.saveJournalToFile(FILE_XML, persons);
+            Journal.saveJournalToFile(FILE_JSON, persons);
+            Journal.saveJournalToFile(FILE_BIN, persons);
+            Journal.saveJournalToFile(FILE_XML, persons);
+        }
 
         displayJournal(persons);
+        System.out.println("toString()");
+        System.out.println(persons.get(1));
     }
 
     public static List<Person> preparePersons() {
@@ -36,7 +39,7 @@ public class Program {
         list.add(new Person("Петр","Петров", 18));
         list.add(new Person("Родион","Раскольников", 27));
         list.add(new Person("Остап","Бендер", 27));
-        // list.add(new Person("Бильбо","Бэггинс", 135));
+        //list.add(new Person("Бильбо","Бэггинс", 135));
         return list;
     }
 }

@@ -24,30 +24,4 @@
     "lastName": "Бэггинс",
     "age": 135
   }
-][
-  {
-    "firstName": "Иван",
-    "lastName": "Иванов",
-    "age": 21
-  },
-  {
-    "firstName": "Петр",
-    "lastName": "Петров",
-    "age": 18
-  },
-  {
-    "firstName": "Родион",
-    "lastName": "Раскольников",
-    "age": 27
-  },
-  {
-    "firstName": "Остап",
-    "lastName": "Бендер",
-    "age": 27
-  },
-  {
-    "firstName": "Бильбо",
-    "lastName": "Бэггинс",
-    "age": 135
-  }
 ]
