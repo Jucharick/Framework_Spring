@@ -31,15 +31,18 @@ public class Program {
         displayJournal(persons);
         System.out.println("toString()");
         System.out.println(persons.get(1));
+        System.out.println("equals()");
+        System.out.println(persons.get(2).equals(persons.get(5)));
     }
 
     public static List<Person> preparePersons() {
         ArrayList<Person> list = new ArrayList<>();
-        list.add(new Person("Иван","Иванов", 21));
-        list.add(new Person("Петр","Петров", 18));
-        list.add(new Person("Родион","Раскольников", 27));
-        list.add(new Person("Остап","Бендер", 27));
-        //list.add(new Person("Бильбо","Бэггинс", 135));
+        list.add(new Person("Ivan","Ivanov", 21));
+        list.add(new Person("Petr","Petrov", 18));
+        list.add(new Person("Bilbo","Beggins", 135));
+        list.add(new Person("Rodion","Raskolnikov", 27));
+        list.add(new Person("Ostap","Bender", 27));
+        list.add(new Person("Bilbo","Beggins", 135));
         return list;
     }
 }
