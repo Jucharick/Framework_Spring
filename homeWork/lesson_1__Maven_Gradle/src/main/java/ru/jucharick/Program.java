@@ -42,7 +42,7 @@ public class Program {
         list.add(new Person("Bilbo","Beggins", 135));
         list.add(new Person("Rodion","Raskolnikov", 27));
         list.add(new Person("Ostap","Bender", 27));
-        list.add(new Person("Bilbo","Beggins", 135));
+        //list.add(new Person("Bilbo","Beggins", 135));
         return list;
     }
 }
