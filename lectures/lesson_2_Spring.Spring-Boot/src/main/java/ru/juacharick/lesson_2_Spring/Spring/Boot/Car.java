@@ -11,10 +11,14 @@ public class Car {
     @Autowired
     Engine engine;
 
-//    public Car(Engine engine) {
-//        this.engine = engine;
-//        engine.go();
-//    }
+    public void start(){
+        engine.go();
+    }
+
+    //    public Car(Engine engine) {
+    //        this.engine = engine;
+    //        engine.go();
+    //    }
 
     // Внедрение зависимостей:
     // 1. способ - внедряем через конструктор (основной)
