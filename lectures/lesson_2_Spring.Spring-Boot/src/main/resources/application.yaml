@@ -1,5 +1,3 @@
 spring:
-  datasource:
-    url: rgrg
-    username: rrgverr
-    password: vfvfv
+  profiles:
+    default: prod
