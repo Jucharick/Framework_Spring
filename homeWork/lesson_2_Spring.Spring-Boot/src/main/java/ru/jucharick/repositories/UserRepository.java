@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Repository
 public class UserRepository {
@@ -31,7 +32,7 @@ public class UserRepository {
     }
 
     public User save(User user) {
-        String sql = "INSERT INTO userTable VALUES (Null, ?, ?)";
+        String sql = "INSERT INTO userTable (firstName,lastName) VALUES (?, ?)";
         jdbc.update(sql, user.getFirstName(), user.getLastName());
         return  user;
     }
