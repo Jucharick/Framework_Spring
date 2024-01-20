@@ -2,7 +2,6 @@ package ru.jucharick.controllers;
 
 import ru.jucharick.model.User;
 import ru.jucharick.service.UserService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
