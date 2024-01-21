@@ -3,13 +3,22 @@ package ru.jucharick.model;
 import java.util.Objects;
 
 public class User {
-
+    //region Поля
+    /**
+     * Идентификатор
+     */
     private int id;
-
+    /**
+     * Имя
+     */
     private String firstName;
-
+    /**
+     * Фамилия
+     */
     private String lastName;
+    //endregion
 
+    //region Конструкторы
     public User(int id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
@@ -17,7 +26,9 @@ public class User {
     }
 
     public User(){}
+    //endregion
 
+    //region Методы
     public int getId() {
         return id;
     }
@@ -54,4 +65,5 @@ public class User {
     public int hashCode() {
         return Objects.hash(id, firstName, lastName);
     }
+    //endregion
 }

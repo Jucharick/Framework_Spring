@@ -9,14 +9,21 @@ import java.util.List;
 
 @Service
 public class UserService {
+    //region Поля
+    /**
+     * UserRepository
+     */
     private final UserRepository userRepository;
+    //endregion
 
-
+    //region Конструкторы
     @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+    //endregion
 
+    //region Методы
     public List<User> findAll(){
         return userRepository.findAll();
     }
@@ -29,11 +36,12 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public void deleteById(Integer id) {
+    public void deleteById(int id) {
         userRepository.deleteById(id);
     }
 
     public void updateUser(User user) {
         userRepository.updateUser(user);
     }
+    //endregion
 }
