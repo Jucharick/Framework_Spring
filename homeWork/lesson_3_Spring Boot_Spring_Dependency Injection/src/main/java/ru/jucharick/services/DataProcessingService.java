@@ -11,9 +11,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class DataProcessingService {
+    //region Поля
     @Autowired
     private UserRepository repository;
+    //endregion
 
+    //region Методы
     public UserRepository getRepository() {
         return repository;
     }
@@ -37,7 +40,8 @@ public class DataProcessingService {
                 .orElse(0);
     }
 
-    public void  addUserToList(User user) {
-        repository.getUsers().add(user);
+    public void  addUserToDB(User user) {
+        repository.saveUser(user);
     }
+    //endregion
 }

@@ -1,10 +1,33 @@
 package ru.jucharick.domain;
 
 public class User {
-
+    //region Поля
+    /**
+     * Идентификатор
+     */
+    private int id;
+    /**
+     * Имя
+     */
     private String name;
+    /**
+     * Возраст
+     */
     private int age;
+    /**
+     * email
+     */
     private String email;
+    //endregion
+
+    //region Методы
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -29,4 +52,5 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+    //endregion
 }

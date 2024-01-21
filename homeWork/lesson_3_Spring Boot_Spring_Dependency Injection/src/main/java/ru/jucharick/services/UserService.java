@@ -6,15 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class UserService {
-
+    //region Поля
     @Autowired
     private NotificationService notificationService;
+    //endregion
 
-    // Внедрение зависимости через конструктор
-//    public UserService(NotificationService notificationService) {
-//        this.notificationService = notificationService;
-//    }
-
+    //region Методы
     public User createUser(String name, int age, String email) {
         User user = new User();
         user.setName(name);
@@ -26,4 +23,5 @@ public class UserService {
 
         return user;
     }
+    //endregion
 }

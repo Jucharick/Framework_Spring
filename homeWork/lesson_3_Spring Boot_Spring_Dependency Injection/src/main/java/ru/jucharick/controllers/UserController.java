@@ -10,17 +10,21 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")//localhost:8080/user
 public class UserController {
+    //region Поля
     @Autowired
     private RegistrationService service;
+    //endregion
 
+    //region Методы
     @GetMapping
     public List<User> userList() {
         return service.getDataProcessingService().getRepository().getUsers();
     }
 
     @PostMapping("/body")
-    public String userAddFromBody(@RequestBody User user) {
-        service.getDataProcessingService().getRepository().getUsers().add(user);
+    public String userAddFromParam(@RequestBody User user) {
+        service.processRegistration(user.getName(), user.getAge(), user.getEmail());
         return "User added from body!";
     }
+    //endregion
 }

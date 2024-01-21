@@ -15,10 +15,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
-
+    //region Поля
     @Autowired
     private DataProcessingService service;
+    //endregion
 
+    //region Методы
     @GetMapping
     public List<String> getAllTasks()
     {
@@ -43,4 +45,5 @@ public class TaskController {
     public double calculateAverageAge(){
         return service.calculateAverageAge(service.getRepository().getUsers());
     }
+    //endregion
 }
