@@ -1,5 +1,6 @@
 package ru.jucharick.controllers;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import ru.jucharick.domain.User;
 import ru.jucharick.services.DataProcessingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +30,17 @@ public class TaskController {
     }
 
     @GetMapping("/sort")//localhost:8080/tasks/sort
-    public List<User> sortUsersByAge()
-    {
+    public List<User> sortUsersByAge() {
         return service.sortUsersByAge(service.getRepository().getUsers());
     }
 
-    //метод filterUsersByAge
-    //Подсказка  @GetMapping("/filter/{age}")
+    @GetMapping("/filter/{age}")
+    public List<User> filterUsersByAge(@PathVariable("age") int age) {
+        return service.filterUsersByAge(service.getRepository().getUsers(), age);
+    }
 
-    //метод calculateAverageAge
-    //Подсказка  @GetMapping("/calc")
+    @GetMapping("/calc")
+    public double calculateAverageAge(){
+        return service.calculateAverageAge(service.getRepository().getUsers());
+    }
 }

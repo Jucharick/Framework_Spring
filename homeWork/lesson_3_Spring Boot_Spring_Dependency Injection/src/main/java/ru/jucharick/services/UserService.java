@@ -2,17 +2,18 @@ package ru.jucharick.services;
 
 import ru.jucharick.domain.User;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class UserService {
 
-    // @Autowired
+    @Autowired
     private NotificationService notificationService;
 
     // Внедрение зависимости через конструктор
-    public UserService(NotificationService notificationService) {
-        this.notificationService = notificationService;
-    }
+//    public UserService(NotificationService notificationService) {
+//        this.notificationService = notificationService;
+//    }
 
     public User createUser(String name, int age, String email) {
         User user = new User();

@@ -11,14 +11,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class DataProcessingService {
+    @Autowired
+    private UserRepository repository;
 
     public UserRepository getRepository() {
         return repository;
     }
-
-    @Autowired
-    private UserRepository repository;
-
 
     public List<User> sortUsersByAge(List<User> users) {
         return users.stream()
@@ -28,7 +26,7 @@ public class DataProcessingService {
 
     public List<User> filterUsersByAge(List<User> users, int age) {
         return users.stream()
-                .filter(user -> user.getAge() > age)
+                .filter(user -> user.getAge() == age)
                 .collect(Collectors.toList());
     }
 
@@ -39,8 +37,7 @@ public class DataProcessingService {
                 .orElse(0);
     }
 
-    public void  addUserToList(User user)
-    {
+    public void  addUserToList(User user) {
         repository.getUsers().add(user);
     }
 }

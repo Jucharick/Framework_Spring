@@ -8,6 +8,7 @@ import java.util.List;
 
 @Component
 public class UserRepository {
+    private List<User> users = new ArrayList<>();
 
     public List<User> getUsers() {
         return users;
@@ -16,7 +17,4 @@ public class UserRepository {
     public void setUsers(List<User> users) {
         this.users = users;
     }
-
-    private List<User> users = new ArrayList<>();
-
 }
