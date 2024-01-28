@@ -9,7 +9,7 @@
 <div th:switch="${tasks}">
     <div th:case="*" class="container">
         <h2 th:case="null">Tasks not found!</h2>
-        <h2>Task</h2>
+        <h2>Tasks</h2>
         <table class="table">
             <thead>
             <tr>
@@ -28,9 +28,9 @@
                 <td th:text="${task.title}"></td>
                 <td th:text="${task.description}"></td>
                 <td th:text="${task.status}"></td>
-                <td th:text="${task.requestedBy}"></td>
-                <td th:text="${task.assignedBy}"></td>
-                <td th:text="${task.assigneeID}"></td>
+                <td><a th:href="@{user/{id}(id=${task.requestedBy})}" class="btn btn-light" th:text="${task.requestedBy}"></a></td>
+                <td><a th:href="@{user/{id}(id=${task.assignedBy})}" class="btn btn-light" th:text="${task.assignedBy}"></a></td>
+                <td><a th:href="@{user/{id}(id=${task.assigneeID})}" class="btn btn-light" th:text="${task.assigneeID}"></a></td>
                 <td><a th:href="@{task-update/{id}(id=${task.id})}" class="btn btn-warning">Update task</a></td>
                 <td><a th:href="@{task-delete/{id}(id=${task.id})}" class="btn btn-secondary">Delete</a></td>
             </tr>
