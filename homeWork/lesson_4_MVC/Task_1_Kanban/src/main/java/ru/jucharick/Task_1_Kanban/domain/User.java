@@ -6,22 +6,27 @@ public class User {
      * Идентификатор
      */
     private int id;
+
     /**
      * Имя
      */
     private String firstName ;
+
     /**
      * Фамилия
      */
     private String lastName ;
+
     /**
      * Должность
      */
     private String position;
+
     /**
      * Команда
      */
     private String team;
+
     /**
      * email
      */

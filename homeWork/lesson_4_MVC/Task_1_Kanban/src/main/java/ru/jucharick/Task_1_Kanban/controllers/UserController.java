@@ -36,6 +36,13 @@ public class UserController {
         return "user-list";
     }
 
+    @GetMapping ("/user/{id}")
+    public String findUser(@PathVariable("id") Integer id, Model model){
+        User user = userService.findUserById(id);
+        model.addAttribute("user", user);
+        return "user";
+    }
+
     @GetMapping("/user-create")
     public String createUserForm(User user){
         return "user-create";

@@ -29,7 +29,8 @@
                         <td th:text="${user.position}"></td>
                         <td th:text="${user.team}"></td>
                         <td th:text="${user.email}"></td>
-                        <td><a th:href="@{user-update/{id}(id=${user.id})}" class="btn btn-warning">Edit user</a></td>
+                        <td><a th:href="@{user/{id}(id=${user.id})}" class="btn btn-warning">Edit user</a></td>
+                        <td><a th:href="@{user-update/{id}(id=${user.id})}" class="btn btn-warning">Update user</a></td>
                         <td><a th:href="@{user-delete/{id}(id=${user.id})}" class="btn btn-secondary">Delete</a></td>
                     </tr>
                     </tbody>
