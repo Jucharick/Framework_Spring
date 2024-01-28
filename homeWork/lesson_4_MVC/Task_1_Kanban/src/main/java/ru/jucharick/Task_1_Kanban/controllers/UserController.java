@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
+import ru.jucharick.Task_1_Kanban.domain.Task;
 import ru.jucharick.Task_1_Kanban.domain.User;
+import ru.jucharick.Task_1_Kanban.services.TaskService;
 import ru.jucharick.Task_1_Kanban.services.UserService;
 
 @Controller
@@ -19,12 +21,14 @@ public class UserController {
      * UserService
      */
     private final UserService userService;
+    private final TaskService taskService;
     //endregion
 
     //region Конструкторы
     @Autowired
-    public UserController(UserService userService) {
+    public UserController(UserService userService, TaskService taskService) {
         this.userService = userService;
+        this.taskService = taskService;
     }
     //endregion
 
@@ -40,6 +44,8 @@ public class UserController {
     public String findUser(@PathVariable("id") Integer id, Model model){
         User user = userService.findUserById(id);
         model.addAttribute("user", user);
+        List<Task> tasks = taskService.findTaskByUserId(id);
+        model.addAttribute("tasks", tasks);
         return "user";
     }
 

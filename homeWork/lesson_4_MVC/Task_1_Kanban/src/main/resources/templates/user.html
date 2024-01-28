@@ -30,6 +30,34 @@
                 </tr>
             </tbody>
         </table>
+
+        <h2>User's tasks</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">title</th>
+                <th scope="col">description</th>
+                <th scope="col">status</th>
+                <th scope="col">requested By</th>
+                <th scope="col">assigned By</th>
+                <th scope="col">assignee</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="task: ${tasks}">
+                <td th:text="${task.id}" scope="row"></td>
+                <td th:text="${task.title}"></td>
+                <td th:text="${task.description}"></td>
+                <td th:text="${task.status}"></td>
+                <td th:text="${task.requestedBy}"></td>
+                <td th:text="${task.assignedBy}"></td>
+                <td th:text="${task.assigneeID}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+
         <a th:href="@{/users}" class="btn btn-secondary">Return</a>
     </div>
 </body>

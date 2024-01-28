@@ -32,6 +32,10 @@ public class TaskService {
         return taskRepository.findTask(id);
     }
 
+    public List<Task> findTaskByUserId(Integer id){
+        return taskRepository.findTaskForUsers(id);
+    }
+
     public Task saveTask(Task task){
         return taskRepository.saveTask(task);
     }

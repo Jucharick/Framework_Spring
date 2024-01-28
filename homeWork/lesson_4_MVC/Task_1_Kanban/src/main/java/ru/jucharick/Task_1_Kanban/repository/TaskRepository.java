@@ -63,6 +63,26 @@ public class TaskRepository {
     }
 
     /**
+     * SELECT WHERE assigneeID = ?
+     * поиск тасков по исполнителю
+     */
+    public List<Task> findTaskForUsers(Integer idUser){
+        String sql = "SELECT * FROM taskTable WHERE assigneeID = ?";
+        RowMapper<Task> taskRowMapper = (r, i) -> {
+            Task rowObject = new Task();
+            rowObject.setId(r.getInt("id"));
+            rowObject.setTitle(r.getString("title"));
+            rowObject.setDescription(r.getString("description"));
+            rowObject.setStatus(r.getString("status"));
+            rowObject.setRequestedBy(r.getInt("requestedBy"));
+            rowObject.setAssignedBy(r.getInt("assignedBy"));
+            rowObject.setAssigneeID(r.getInt("assigneeID"));
+            return rowObject;
+        };
+        return jdbc.query(sql, new Object[]{idUser}, taskRowMapper);
+    }
+
+    /**
      * INSERT
      */
     public Task saveTask(Task task) {
