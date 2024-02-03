@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exam1Sem4/Example1Seminar4/Example1Seminar4.iml" filepath="$PROJECT_DIR$/Exam1Sem4/Example1Seminar4/Example1Seminar4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam2Sem4/Example2Seminar4/Example2Seminar4.iml" filepath="$PROJECT_DIR$/Exam2Sem4/Example2Seminar4/Example2Seminar4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lesson_4_MVC.iml" filepath="$PROJECT_DIR$/.idea/lesson_4_MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Spring_Seminar_4-main/main.iml" filepath="$PROJECT_DIR$/Java_Spring_Seminar_4-main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam3Sem4/sq-ch8-ex6/sq-ch8-ex6.iml" filepath="$PROJECT_DIR$/Exam3Sem4/sq-ch8-ex6/sq-ch8-ex6.iml" />
+    </modules>
+  </component>
+</project>
