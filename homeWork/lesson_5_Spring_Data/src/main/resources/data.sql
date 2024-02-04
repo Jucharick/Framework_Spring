@@ -1,0 +1,11 @@
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Provision','Расчет оценочных резервов для офшорных зон', 'assigned', 5, 4, 6);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Deals','Добавление поля для сделочной информации', 'resolved', 3, 4, 1);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Accounting','Добавление поля для архивных счетов', 'in_progress', 3, 4, 1);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Reports','Добавление отчета по ссылочной целостности', 'resolved', 6, 4, 3);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Hotfix','Доработка формы 0409701' , 'reopened', 3, 2, 6);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Hotfix','Доработка формы 0409305' , 'reopened', 3, 2, 6);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Hotfix','Доработка формы 0409101' , 'assigned', 3, 4, 2);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Hotfix','Доработка формы 0409303' , 'in_progress', 3, 4, 2);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('Exchange_deals','Бизнес требования для биржевых сделок' , 'in_progress', 3, 2, 4);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('FI_deals','Анализ сделочного модуля FI' , 'assigned', 4, 2, 5);
+INSERT INTO tasks (title,description,status,requested_by,assigned_by,assigneeID) VALUES ('FX_deals','Анализ сделочного модуля FX' , 'in_progress', 4, 2, 5);
