@@ -3,6 +3,8 @@ package ru.jucharick.Task_1_Kanban.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
 @Entity
 @Table(name = "tasks")
@@ -56,5 +58,11 @@ public class Task {
      */
     @Column(nullable = true)
     private int assigneeID;
+
+    /**
+     * date the task was created or updated
+     */
+    @Column(nullable = false)
+    private LocalDateTime dateTime;
     //endregion
 }

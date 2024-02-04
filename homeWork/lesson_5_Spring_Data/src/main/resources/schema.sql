@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS tasks (
     status varchar(50) NOT NULL,
     requested_by int NULL,
     assigned_by int NULL,
-    assigneeID int NULL
+    assigneeID int NULL,
+    date_time timestamp NOT NULL
 );
 
 

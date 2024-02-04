@@ -2,6 +2,8 @@ package ru.jucharick.Task_1_Kanban.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,6 +48,7 @@ public class TaskService {
             task.setRequestedBy(taskToUpdate.getRequestedBy());
             task.setAssignedBy(taskToUpdate.getAssignedBy());
             task.setAssigneeID(taskToUpdate.getAssigneeID());
+            task.setDateTime(LocalDateTime.now());
             return taskRepository.save(task);
         } else {
             throw new IllegalArgumentException("Task not found with id: " + id);
