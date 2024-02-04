@@ -33,7 +33,7 @@ public class TaskController {
 
     @PostMapping
     public Task addTask(@RequestBody Task task){
-        return taskService.saveTask(task);
+        return taskService.createTask(task);
     }
 
     @DeleteMapping ("/task-delete/{id}")

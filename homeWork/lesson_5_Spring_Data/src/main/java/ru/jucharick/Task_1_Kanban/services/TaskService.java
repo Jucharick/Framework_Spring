@@ -30,7 +30,8 @@ public class TaskService {
         return taskRepository.getTasksByStatus(status);
     }
 
-    public Task saveTask(Task task){
+    public Task createTask(Task task){
+        task.setDateTime(LocalDateTime.now());
         return taskRepository.save(task);
     }
 
