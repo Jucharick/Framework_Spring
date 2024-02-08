@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Example4JWT/Spring-Boot-simple-jwt-example-main/SimpleJWT.iml" filepath="$PROJECT_DIR$/Example4JWT/Spring-Boot-simple-jwt-example-main/SimpleJWT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example6OlderMan/SpringBoot3.2.0-part02_security/SpringBoot3.2.0/SpringBoot3.2.0.iml" filepath="$PROJECT_DIR$/Example6OlderMan/SpringBoot3.2.0-part02_security/SpringBoot3.2.0/SpringBoot3.2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example5JWTHabr/SpringSecurity-master/SpringSecurity.iml" filepath="$PROJECT_DIR$/Example5JWTHabr/SpringSecurity-master/SpringSecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lesson_7_Spring_Security.iml" filepath="$PROJECT_DIR$/.idea/lesson_7_Spring_Security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exml1Sem7/spring_security_demo/spring_security_demo.iml" filepath="$PROJECT_DIR$/Exml1Sem7/spring_security_demo/spring_security_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2Form/ssia-ch5-ex4/ssia-ch5-ex4.iml" filepath="$PROJECT_DIR$/Example2Form/ssia-ch5-ex4/ssia-ch5-ex4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example3/ssia-ch6-ex1/ssia-ch6-ex1.iml" filepath="$PROJECT_DIR$/Example3/ssia-ch6-ex1/ssia-ch6-ex1.iml" />
+    </modules>
+  </component>
+</project>
