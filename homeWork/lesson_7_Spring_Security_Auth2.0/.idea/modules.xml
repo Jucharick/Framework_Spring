@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client/Spring_Auth_2.0/Spring_Auth_2.0.iml" filepath="$PROJECT_DIR$/client/Spring_Auth_2.0/Spring_Auth_2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-server/Spring_Auth_2.0/Spring_Auth_2.0 (1).iml" filepath="$PROJECT_DIR$/auth-server/Spring_Auth_2.0/Spring_Auth_2.0 (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/resource-server/Spring_Auth_2.0/Spring_Auth_2.0 (2).iml" filepath="$PROJECT_DIR$/resource-server/Spring_Auth_2.0/Spring_Auth_2.0 (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lesson_7_Spring_Security_Auth2.0.iml" filepath="$PROJECT_DIR$/.idea/lesson_7_Spring_Security_Auth2.0.iml" />
+    </modules>
+  </component>
+</project>
