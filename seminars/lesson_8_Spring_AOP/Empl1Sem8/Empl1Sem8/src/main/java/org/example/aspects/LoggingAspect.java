@@ -27,8 +27,8 @@ public class LoggingAspect {
                 " with parameters " + Arrays.asList(arguments) +
                 " will execute");
 
-        System.out.println("Сообщение до вызова декаоируемого метода");
-        //logger.info("Сообщение до вызова декаоируемого метода");
+        System.out.println("Сообщение до вызова декорируемого метода");
+        //logger.info("Сообщение до вызова декорируемого метода");
 
 
         Comment comment = new Comment();
@@ -38,8 +38,8 @@ public class LoggingAspect {
 
 
         Object returnedByMethod = joinPoint.proceed(newArguments);
-        //logger.info("Сообщение после вызова декаоируемого метода");
-        System.out.println("Сообщение после вызова декаоируемого метода");
+        //logger.info("Сообщение после вызова декорируемого метода");
+        System.out.println("Сообщение после вызова декорируемого метода");
 
 
         return returnedByMethod;
