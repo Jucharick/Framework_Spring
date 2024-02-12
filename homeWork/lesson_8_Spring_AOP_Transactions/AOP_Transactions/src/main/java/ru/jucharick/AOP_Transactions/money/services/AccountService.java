@@ -1,6 +1,6 @@
-package ru.jucharick.AOP_Transactions.services;
+package ru.jucharick.AOP_Transactions.money.services;
 
-import ru.jucharick.AOP_Transactions.domains.Account;
+import ru.jucharick.AOP_Transactions.money.domains.Account;
 
 import java.util.List;
 

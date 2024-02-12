@@ -1,4 +1,4 @@
-package ru.jucharick.AOP_Transactions.aspect;
+package ru.jucharick.AOP_Transactions.money.aspect;
 
 import lombok.extern.java.Log;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -14,7 +14,7 @@ import java.util.Arrays;
 @Log
 public class LoggingAspect {
     // @annotation
-    @Around("@annotation(ru.jucharick.AOP_Transactions.aspect.TracAction)")
+    @Around("@annotation(ru.jucharick.AOP_Transactions.money.aspect.TrackAction)")
     @Order(1)
     public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
         String methodName = joinPoint.getSignature().getName();
@@ -27,7 +27,7 @@ public class LoggingAspect {
     }
 
     // execution
-    @Around("execution(* ru.jucharick.AOP_Transactions.repository.*.*(..))")
+    @Around("execution(* ru.jucharick.AOP_Transactions.money.repository.*.*(..))")
     @Order(2)
     public Object measureMethodExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable{
         long start = System.currentTimeMillis();

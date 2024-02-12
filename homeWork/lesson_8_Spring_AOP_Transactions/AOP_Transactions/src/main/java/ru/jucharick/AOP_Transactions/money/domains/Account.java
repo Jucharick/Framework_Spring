@@ -1,8 +1,7 @@
-package ru.jucharick.AOP_Transactions.domains;
+package ru.jucharick.AOP_Transactions.money.domains;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 
@@ -22,7 +21,7 @@ public class Account {
     private String acid;
 
     @Column(nullable = false)
-    private BigDecimal amount;
+    private Double amount;
 
     @Column(nullable = true)
     private LocalDateTime upd_date;

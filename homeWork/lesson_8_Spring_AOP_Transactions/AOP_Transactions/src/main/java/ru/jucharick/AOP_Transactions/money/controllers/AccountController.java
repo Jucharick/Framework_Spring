@@ -1,17 +1,17 @@
-package ru.jucharick.AOP_Transactions.controllers;
+package ru.jucharick.AOP_Transactions.money.controllers;
 
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.jucharick.AOP_Transactions.domains.Account;
-import ru.jucharick.AOP_Transactions.services.AccountService;
+import ru.jucharick.AOP_Transactions.money.domains.Account;
+import ru.jucharick.AOP_Transactions.money.services.AccountService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/accounts")
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class AccountController {
     private final AccountService accountService;
 
@@ -46,4 +46,5 @@ public class AccountController {
         accountService.deleteAccount(id);
         return ResponseEntity.ok().build();
     }
+
 }

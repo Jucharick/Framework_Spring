@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS accounts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cnum VARCHAR(8) NOT NULL,
     acid VARCHAR(20) NOT NULL,
-    amount BIGINT NOT NULL,
+    amount FLOAT NOT NULL,
     upd_date TIMESTAMP NULL
 );
 

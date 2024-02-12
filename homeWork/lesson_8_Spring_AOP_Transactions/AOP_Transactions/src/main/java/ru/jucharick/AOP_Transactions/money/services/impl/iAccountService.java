@@ -1,16 +1,16 @@
-package ru.jucharick.AOP_Transactions.services.impl;
+package ru.jucharick.AOP_Transactions.money.services.impl;
 
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.jucharick.AOP_Transactions.domains.Account;
-import ru.jucharick.AOP_Transactions.repositories.AccountRepository;
-import ru.jucharick.AOP_Transactions.services.AccountService;
+import ru.jucharick.AOP_Transactions.money.domains.Account;
+import ru.jucharick.AOP_Transactions.money.repositories.AccountRepository;
+import ru.jucharick.AOP_Transactions.money.services.AccountService;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class iAccountService implements AccountService {
     private final AccountRepository accountRepository;
 

@@ -1,4 +1,4 @@
-package ru.jucharick.AOP_Transactions.aspect;
+package ru.jucharick.AOP_Transactions.money.aspect;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

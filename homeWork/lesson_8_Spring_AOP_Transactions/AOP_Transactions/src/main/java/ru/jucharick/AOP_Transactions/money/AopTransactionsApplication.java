@@ -1,4 +1,4 @@
-package ru.jucharick.AOP_Transactions;
+package ru.jucharick.AOP_Transactions.money;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
