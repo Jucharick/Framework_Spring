@@ -8,3 +8,10 @@ INSERT INTO accounts (cnum,acid,amount,upd_date)
 VALUES ('AS92004D','40817810400029384724',1000,'2024-02-03 12:00:00');
 INSERT INTO accounts (cnum,acid,amount,upd_date)
 VALUES ('2004284D','40817810400029384712',390000,'2024-02-03 12:00:00');
+
+
+
+INSERT INTO products (name,amount,price)
+VALUES ('Зубная щетка','23',130.50);
+INSERT INTO products (name,amount,price)
+VALUES ('Шампунь','8',899);
