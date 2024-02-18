@@ -1,4 +1,4 @@
-package ru.jucharick.Task_1_Kanban.domain;
+package ru.jucharick.tasks.domain;
 
 public enum TaskStatus {
     /**
