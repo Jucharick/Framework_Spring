@@ -1,11 +1,12 @@
 package ru.jucharick.Tasks.services;
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 import ru.jucharick.Tasks.domain.Task;
+import ru.jucharick.Tasks.observer.TaskUpdatedEvent;
 import ru.jucharick.Tasks.repository.TaskRepository;
 
 @Service
@@ -16,6 +17,7 @@ public class TaskService {
      * UserRepository
      */
     private final TaskRepository taskRepository;
+    private ApplicationEventPublisher publisher;
     //endregion
 
     //region Методы
@@ -41,6 +43,7 @@ public class TaskService {
 
     public void updateTask(Task task) {
         taskRepository.updateTask(task);
+        publisher.publishEvent(new TaskUpdatedEvent(this, task));
     }
     //endregion
 }
