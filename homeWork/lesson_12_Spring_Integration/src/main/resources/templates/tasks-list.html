@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Tasks</title>
+</head>
+<body>
+<div th:switch="${tasks}">
+    <div th:case="*" class="container">
+        <h2 th:case="null">Tasks not found!</h2>
+        <h2>Tasks</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">title</th>
+                <th scope="col">description</th>
+                <th scope="col">status</th>
+                <th scope="col">requested By</th>
+                <th scope="col">assigned By</th>
+                <th scope="col">assignee</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="task: ${tasks}">
+                <td th:text="${task.id}" scope="row"></td>
+                <td th:text="${task.title}"></td>
+                <td th:text="${task.description}"></td>
+                <td th:text="${task.status}"></td>
+                <td><a th:href="@{user/{id}(id=${task.requestedBy})}" class="btn btn-light" th:text="${task.requestedBy}"></a></td>
+                <td><a th:href="@{user/{id}(id=${task.assignedBy})}" class="btn btn-light" th:text="${task.assignedBy}"></a></td>
+                <td><a th:href="@{user/{id}(id=${task.assigneeID})}" class="btn btn-light" th:text="${task.assigneeID}"></a></td>
+                <td><a th:href="@{task-update/{id}(id=${task.id})}" class="btn btn-warning">Update task</a></td>
+                <td><a th:href="@{task-delete/{id}(id=${task.id})}" class="btn btn-secondary">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <p><a href="/task-create" class="btn btn-info">Create task</a></p>
+    </div>
+</div>
+</body>
+</html>
