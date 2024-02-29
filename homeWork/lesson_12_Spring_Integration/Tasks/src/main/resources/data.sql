@@ -1,11 +1,3 @@
-CREATE TABLE IF NOT EXISTS userTable (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    firstName varchar(20) NOT NULL,
-    lastName varchar(50) NOT NULL,
-    position varchar(50) NOT NULL,
-    team varchar(50) NOT NULL,
-    email varchar(50) NULL
-);
 
 INSERT INTO userTable (firstName,lastName,position,team,email) VALUES ('Alex','Katz', 'junior java developer', 'FSP', 'exam1@yandex.ru');
 INSERT INTO userTable (firstName,lastName,position,team,email) VALUES ('Bilbo','Baggins', 'teamlead', 'FSP', 'exam2@yandex.ru');
@@ -15,19 +7,6 @@ INSERT INTO userTable (firstName,lastName,position,team,email) VALUES ('Ahsoka',
 INSERT INTO userTable (firstName,lastName,position,team,email) VALUES ('Boba','Fett', 'sinior java developer', 'FSP', 'exam6@yandex.ru');
 
 
-
-CREATE TABLE IF NOT EXISTS taskTable (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title varchar(50) NOT NULL,
-    description text NOT NULL,
-    status  ENUM('assigned', 'in_progress', 'resolved', 'reopened', 'closed') NOT NULL,
-    requestedBy int NULL,
-    assignedBy int NULL,
-    assigneeID int NULL,
-    FOREIGN KEY(requestedBy) REFERENCES userTable(id) ON DELETE SET NULL,
-    FOREIGN KEY(assignedBy) REFERENCES userTable(id) ON DELETE SET NULL,
-    FOREIGN KEY(assigneeID) REFERENCES userTable(id) ON DELETE SET NULL
-);
 
 
 INSERT INTO taskTable (title,description,status,requestedBy,assignedBy,assigneeID) VALUES ('Provision','Расчет оценочных резервов для офшорных зон', 'assigned', 5, 4, 6);
@@ -41,5 +20,3 @@ INSERT INTO taskTable (title,description,status,requestedBy,assignedBy,assigneeI
 INSERT INTO taskTable (title,description,status,requestedBy,assignedBy,assigneeID) VALUES ('Exchange_deals','Бизнес требования для биржевых сделок' , 'in_progress', 3, 2, 4);
 INSERT INTO taskTable (title,description,status,requestedBy,assignedBy,assigneeID) VALUES ('FI_deals','Анализ сделочного модуля FI' , 'assigned', 4, 2, 5);
 INSERT INTO taskTable (title,description,status,requestedBy,assignedBy,assigneeID) VALUES ('FX_deals','Анализ сделочного модуля FX' , 'in_progress', 4, 2, 5);
-
-

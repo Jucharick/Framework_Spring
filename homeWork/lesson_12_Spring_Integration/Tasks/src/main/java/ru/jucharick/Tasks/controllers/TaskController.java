@@ -1,8 +1,8 @@
 package ru.jucharick.Tasks.controllers;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.ui.Model;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,22 +11,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 import ru.jucharick.Tasks.domain.Task;
+import ru.jucharick.Tasks.services.FileGateway;
 import ru.jucharick.Tasks.services.TaskService;
 
 @Controller
+@RequiredArgsConstructor
 public class TaskController {
     //region Поля
     /**
      * TaskService
      */
     private final TaskService taskService;
-    //endregion
-
-    //region Конструкторы
-    @Autowired
-    public TaskController(TaskService taskService) {
-        this.taskService = taskService;
-    }
+    private final FileGateway fileGateway;
     //endregion
 
     //region Методы
@@ -43,7 +39,8 @@ public class TaskController {
     }
 
     @PostMapping("/task-create")
-    public String createUser(Task task){
+    public String createTask(Task task){
+        fileGateway.writeToFile(task.getTitle() + ".txt", task.toString());
         taskService.saveTask(task);
         return "redirect:/tasks";
     }
