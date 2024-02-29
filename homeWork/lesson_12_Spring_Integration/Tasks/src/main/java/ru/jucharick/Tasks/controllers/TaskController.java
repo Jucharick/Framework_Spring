@@ -43,9 +43,9 @@ public class TaskController {
 
     @PostMapping("/task-create")
     public String createTask(Task task){
-        taskService.saveTask(task);
         fileGateway.writeToFile(task.getTitle() + ".txt", task.toString());
         fileGateway.writeLog("log.txt", LocalDateTime.now() + "  вызван метод createTask() " + "создана таска " + task.getTitle());
+        taskService.saveTask(task);
         return "redirect:/tasks";
     }
 
@@ -65,7 +65,7 @@ public class TaskController {
 
     @PostMapping("/task-update")
     public String updateTask(@ModelAttribute("task") Task task){
-        fileGateway.writeLog("log.txt", LocalDateTime.now() + "  вызван метод updateTask()" + "изменена таска id " + task.getId() + " " + task.getTitle());
+        fileGateway.writeLog("log.txt", LocalDateTime.now() + "  вызван метод updateTask() " + "изменена таска id " + task.getId() + " " + task.getTitle());
         taskService.updateTask(task);
         return "redirect:/tasks";
     }

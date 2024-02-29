@@ -1,7 +1,7 @@
 package ru.jucharick.Tasks.controllers;
 
+import lombok.AllArgsConstructor;
 import org.springframework.ui.Model;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,24 +12,17 @@ import java.util.List;
 import ru.jucharick.Tasks.domain.Task;
 import ru.jucharick.Tasks.domain.User;
 import ru.jucharick.Tasks.services.TaskService;
-import ru.jucharick.Tasks.services.UserService;
+import ru.jucharick.Tasks.services.UserServiceApi;
 
 @Controller
+@AllArgsConstructor
 public class UserController {
     //region Поля
     /**
      * UserService
      */
-    private final UserService userService;
+    private final UserServiceApi userService;
     private final TaskService taskService;
-    //endregion
-
-    //region Конструкторы
-    @Autowired
-    public UserController(UserService userService, TaskService taskService) {
-        this.userService = userService;
-        this.taskService = taskService;
-    }
     //endregion
 
     //region Методы
