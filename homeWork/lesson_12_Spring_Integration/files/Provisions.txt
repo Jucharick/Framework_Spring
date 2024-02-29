@@ -1,1 +1,0 @@
-ru.jucharick.Tasks.domain.Task@3c2e7fd0

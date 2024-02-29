@@ -1,5 +1,6 @@
 package ru.jucharick.Tasks.services;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -8,19 +9,13 @@ import ru.jucharick.Tasks.domain.Task;
 import ru.jucharick.Tasks.repository.TaskRepository;
 
 @Service
+@AllArgsConstructor
 public class TaskService {
     //region Поля
     /**
      * UserRepository
      */
     private final TaskRepository taskRepository;
-    //endregion
-
-    //region Конструкторы
-    @Autowired
-    public TaskService(TaskRepository taskRepository) {
-        this.taskRepository = taskRepository;
-    }
     //endregion
 
     //region Методы

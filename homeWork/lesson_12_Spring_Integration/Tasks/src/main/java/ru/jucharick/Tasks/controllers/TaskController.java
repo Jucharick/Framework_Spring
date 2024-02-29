@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 import ru.jucharick.Tasks.domain.Task;
@@ -28,6 +30,7 @@ public class TaskController {
     //region Методы
     @GetMapping("/tasks")
     public String findAllTask(Model model){
+        //fileGateway.writeLog("log.txt", LocalDateTime.now() + "  вызван метод findAllTask()");
         List<Task> tasks = taskService.findAllTask();
         model.addAttribute("tasks", tasks);
         return "tasks-list";
@@ -40,13 +43,15 @@ public class TaskController {
 
     @PostMapping("/task-create")
     public String createTask(Task task){
-        fileGateway.writeToFile(task.getTitle() + ".txt", task.toString());
         taskService.saveTask(task);
+        fileGateway.writeToFile(task.getTitle() + ".txt", task.toString());
+        fileGateway.writeLog("log.txt", LocalDateTime.now() + "  вызван метод createTask() " + "создана таска " + task.getTitle());
         return "redirect:/tasks";
     }
 
     @GetMapping ("/task-delete/{id}")
     public String deleteTask(@PathVariable("id") Integer id){
+        fileGateway.writeLog("log.txt", LocalDateTime.now() + "  вызван метод deleteTask() " + "удалена таска id " + id);
         taskService.deleteById(id);
         return "redirect:/tasks";
     }
@@ -60,6 +65,7 @@ public class TaskController {
 
     @PostMapping("/task-update")
     public String updateTask(@ModelAttribute("task") Task task){
+        fileGateway.writeLog("log.txt", LocalDateTime.now() + "  вызван метод updateTask()" + "изменена таска id " + task.getId() + " " + task.getTitle());
         taskService.updateTask(task);
         return "redirect:/tasks";
     }
